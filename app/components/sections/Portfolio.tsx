@@ -7,25 +7,15 @@ export default function Portfolio() {
     {
       title: "Landing para SaaS",
       category: "Landing Page",
-      image: "/projects/project1.jpg",
+      desktop: "/projects/projecto1.jpg",
+      mobile: "/projects/projecto1-m.jpg",
       link: "#"
     },
     {
       title: "Sitio corporativo",
       category: "Web Corporativa",
-      image: "/projects/project2.jpg",
-      link: "#"
-    },
-    {
-      title: "Plataforma educativa",
-      category: "Desarrollo Web",
-      image: "/projects/project3.jpg",
-      link: "#"
-    },
-    {
-      title: "Landing de producto",
-      category: "Landing Page",
-      image: "/projects/project4.jpg",
+      desktop: "/projects/projecto2.jpg",
+      mobile: "/projects/projecto2-m.jpg",
       link: "#"
     }
   ]
@@ -63,11 +53,20 @@ export default function Portfolio() {
               {/* IMAGE */}
               <div className="relative h-[260px]">
 
+                {/* Desktop */}
                 <Image
-                  src={project.image}
+                  src={project.desktop}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
+                  className="object-cover group-hover:scale-105 transition duration-500 hidden md:block"
+                />
+
+                {/* Mobile */}
+                <Image
+                  src={project.desktop}
+                  alt={project.title}
+                  fill
+                  className="object-cover object-left group-hover:scale-105 transition duration-500 md:hidden"
                 />
 
               </div>

@@ -21,12 +21,12 @@ export default function Contact() {
 
             <p>
               <strong className="text-[#2C2B2B]">Email:</strong>{" "}
-              contacto@bdlagency.com
+              bedigitallight@gmail.com
             </p>
 
             <p>
               <strong className="text-[#2C2B2B]">WhatsApp:</strong>{" "}
-              +57 300 000 0000
+              +57 322 858 8926
             </p>
 
           </div>
@@ -37,7 +37,7 @@ export default function Contact() {
         <div className="border border-[#E6DEDE] rounded-xl overflow-hidden bg-white">
 
           <iframe
-            src="https://calendly.com/baironalfonsosandovalnino/30min"
+            src="https://calendly.com/bedigitallight/30min"
             width="100%"
             height="700"
           />

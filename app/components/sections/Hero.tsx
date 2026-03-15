@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Hero() {
   return (
     <section className="bg-[#F3EEE9]">
 
-      <div className="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-14 items-center">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-14 items-center">
 
         {/* TEXTO */}
         <div>
@@ -23,19 +24,18 @@ export default function Hero() {
             cada estructura y cada interacción tiene un propósito.
           </p>
 
-          {/* BOTONES */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
 
             <Link
               href="#servicios"
-              className="px-6 py-3 bg-[#2C2B2B] text-white rounded-md text-sm hover:bg-[#3a3a3a] transition"
+              className="px-6 py-3 bg-[#2C2B2B] text-white rounded-md text-sm hover:bg-[#3a3a3a] transition text-center"
             >
               Ver servicios
             </Link>
 
             <Link
               href="#contacto"
-              className="px-6 py-3 border border-[#E6DEDE] rounded-md text-sm text-[#2C2B2B] hover:bg-[#E6DEDE] transition"
+              className="px-6 py-3 border border-[#E6DEDE] rounded-md text-sm text-[#2C2B2B] hover:bg-[#E6DEDE] transition text-center"
             >
               Agendar reunión
             </Link>
@@ -49,11 +49,25 @@ export default function Hero() {
 
           <div className="bg-white border border-[#E6DEDE] rounded-xl shadow-sm p-6">
 
-            <div className="h-[320px] rounded-lg bg-gradient-to-br from-[#E6DEDE] to-[#F3EEE9] flex items-center justify-center">
+            <div className="relative h-[320px] rounded-lg overflow-hidden">
 
-              <p className="text-[#6B6B6B] text-sm">
-                Vista previa de proyecto web
-              </p>
+              {/* Desktop */}
+              <Image
+                src="/hero-preview.jpg"
+                alt="Vista previa del sitio web"
+                fill
+                className="object-cover"
+                priority
+              />
+
+              {/* Mobile */}
+              <Image
+                src="/hero-preview.jpg"
+                alt="Vista previa del sitio web"
+                fill
+                className="object-cover object-left"
+                priority
+              />
 
             </div>
 
